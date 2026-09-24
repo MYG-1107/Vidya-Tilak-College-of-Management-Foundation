@@ -1,57 +1,22 @@
-<header class="bg-[#0f2942] text-white border-b-4 border-sky-500 shadow-sm sticky top-0 z-50">
-    <!-- Utility Top Bar -->
-    <div class="bg-[#0a1c2e] text-slate-300 text-xs py-1.5 px-4">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <span class="flex items-center gap-2">
-                <span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
-                Registered Section 8 Non-Profit Educational Institution (Government of India)
-            </span>
-            <div class="flex items-center gap-4">
-                <a href="governance.html" class="hover:text-white transition">CIN: U80900PN2022NPL216442</a>
-                <span>|</span>
-                <a href="contact.html" class="hover:text-white transition"><i class="fas fa-envelope mr-1"></i> Contact</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Main Navigation Header -->
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="index.html" class="flex items-center gap-3 group">
-            <!-- Logo Placeholder: Replace 'logo.png' with your actual logo path -->
-            <div class="bg-white p-1.5 rounded-md flex items-center justify-center">
-                <img src="logo.png" alt="Vidya Tilak Logo" class="h-10 w-auto object-contain" onerror="this.onerror=null; this.outerHTML='<div class=\'w-10 h-10 bg-sky-700 text-white font-bold flex items-center justify-center rounded text-xl\'>VT</div>';">
-            </div>
-            <div>
-                <span class="text-xl md:text-2xl font-bold tracking-tight block text-white group-hover:text-sky-200 transition">
-                    VIDYA TILAK
-                </span>
-                <span class="text-xs text-sky-200 tracking-wider uppercase block font-medium">
-                    College of Management Foundation
-                </span>
-            </div>
-        </a>
-
-        <!-- Desktop Navigation -->
-        <nav class="hidden md:flex items-center gap-1">
-            <a href="index.html" class="px-4 py-2 rounded-md text-sm font-semibold text-white hover:bg-slate-800 hover:text-sky-300 transition">Home</a>
-            <a href="about.html" class="px-4 py-2 rounded-md text-sm font-semibold text-white hover:bg-slate-800 hover:text-sky-300 transition">About Us</a>
-            <a href="services.html" class="px-4 py-2 rounded-md text-sm font-semibold text-white hover:bg-slate-800 hover:text-sky-300 transition">Programs & Conferences</a>
-            <a href="governance.html" class="px-4 py-2 rounded-md text-sm font-semibold text-white hover:bg-slate-800 hover:text-sky-300 transition">Governance & Compliance</a>
-            <a href="contact.html" class="ml-2 px-5 py-2 rounded-md text-sm font-semibold bg-sky-600 hover:bg-sky-500 text-white transition shadow-sm">Contact Us</a>
-        </nav>
-
-        <!-- Mobile Menu Toggle -->
-        <button id="mobile-menu-btn" class="md:hidden text-white p-2 text-xl focus:outline-none" aria-label="Toggle Navigation">
-            <i class="fas fa-bars"></i>
-        </button>
-    </div>
-
-    <!-- Mobile Navigation Drawer -->
-    <div id="mobile-menu" class="hidden md:hidden bg-[#0a1c2e] border-t border-slate-700 px-4 py-3 space-y-2">
-        <a href="index.html" class="block px-3 py-2 rounded text-base font-medium text-white hover:bg-slate-800">Home</a>
-        <a href="about.html" class="block px-3 py-2 rounded text-base font-medium text-white hover:bg-slate-800">About Us</a>
-        <a href="services.html" class="block px-3 py-2 rounded text-base font-medium text-white hover:bg-slate-800">Programs & Conferences</a>
-        <a href="governance.html" class="block px-3 py-2 rounded text-base font-medium text-white hover:bg-slate-800">Governance & Compliance</a>
-        <a href="contact.html" class="block px-3 py-2 rounded text-base font-medium bg-sky-600 text-white text-center mt-2">Contact Us</a>
-    </div>
+<header class="site-header">
+  <div class="utility"><div class="container utility-inner"><span><i class="fa-solid fa-circle-check"></i> Section 8 educational foundation</span><span>Research • Education • Collaboration</span></div></div>
+  <div class="nav-wrap"><div class="container nav">
+    <a class="brand" href="index.html" aria-label="Vidya Tilak College of Management Foundation home">
+      <span class="brand-mark">VT</span><span><strong>VIDYA TILAK</strong><small>College of Management Foundation</small></span>
+    </a>
+    <button class="menu-btn" id="menu-btn" aria-label="Open navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    <nav class="desktop-nav">
+      <a data-nav href="index.html">Home</a>
+      <a data-nav href="about.html">About</a>
+      <a data-nav href="programs.html">Programs</a>
+      <a data-nav href="research.html">Research</a>
+      <a data-nav href="conferences.html">Conferences</a>
+      <a data-nav href="partnerships.html">Partnerships</a>
+      <a data-nav href="events.html">Events</a>
+      <a class="nav-cta" href="contact.html">Contact</a>
+    </nav>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="programs.html">Programs</a><a href="research.html">Research</a><a href="conferences.html">Conferences</a><a href="partnerships.html">Partnerships</a><a href="events.html">Events</a><a href="leadership.html">Leadership</a><a class="nav-cta" href="contact.html">Contact</a>
+  </nav></div>
 </header>
