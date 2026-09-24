@@ -1,15 +1,46 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Program details and collaboration model.">
-<title>Initiative Details | Vidya Tilak College of Management Foundation</title>
-<link rel="stylesheet" href="assets/styles.css"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
-<body><div id="site-header"></div>
-<main id="program-detail">
-<section class="page-hero"><div class="container"><a class="back-link" href="programs.html"><i class="fa-solid fa-arrow-left"></i> All initiatives</a><span class="eyebrow" id="detail-kicker">Foundation initiative</span><h1 id="detail-title">Initiative</h1><p id="detail-intro"></p></div></section>
-<section class="section"><div class="container detail-grid"><article><h2>What this can include</h2><div id="detail-points" class="detail-points"></div><h2>Suggested delivery</h2><p id="detail-delivery"></p></article><aside class="contact-card"><span class="eyebrow">For institutions</span><h3>Let's shape the right format.</h3><p>Share your audience, objective, expected scale and preferred timeline. We can discuss a suitable engagement model.</p><a class="btn btn-primary full" href="contact.html">Start a conversation</a></aside></div></section>
-<section class="cta-section"><div class="container cta-inner"><div><span class="eyebrow light">Next step</span><h2>Turn an idea into an academic initiative.</h2></div><a class="btn btn-light" href="contact.html">Contact us</a></div></section>
-</main><div id="site-footer"></div><script src="js/main.js"></script></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Detailed initiative information."><title>Program Detail | Vidya Tilak College of Management Foundation</title><link rel="stylesheet" href="assets/styles.css"></head><body>
+<div class="topbar"><div class="container"><span>Section 8 Foundation • Education • Research • Institutional Development</span><span>Research-led • Collaboration-focused • Knowledge-driven</span></div></div>
+<header class="header"><div class="container nav">
+<a class="brand" href="index.html"><img src="assets/logo.svg" alt="Vidya Tilak emblem"><span><strong>VIDYA TILAK</strong><small>College of Management Foundation</small></span></a>
+<nav class="navlinks">
+<a data-page="index.html" href="index.html">Home</a>
+<div class="dropdown"><button class="dropbtn">About ▾</button><div class="menu">
+<a data-page="about.html" href="about.html">Our Story</a><a data-page="founder.html" href="founder.html">Founder</a><a data-page="leadership.html" href="leadership.html">Leadership & Governance</a>
+</div></div>
+<div class="dropdown"><button class="dropbtn">Engage ▾</button><div class="menu">
+<a data-page="admission-process.html" href="admission-process.html">Engagement Process</a><a data-page="eligibility.html" href="eligibility.html">Who Can Engage</a><a data-page="documentation.html" href="documentation.html">Documentation</a><a data-page="application.html" href="application.html">Application / Enquiry</a>
+</div></div>
+<div class="dropdown"><button class="dropbtn">Programs ▾</button><div class="menu">
+<a data-page="programs.html" href="programs.html">All Initiatives</a><a href="program-detail.html?program=faculty">Faculty Development</a><a href="program-detail.html?program=research">Research Support</a><a href="program-detail.html?program=conferences">Conferences</a><a href="program-detail.html?program=students">Student Initiatives</a>
+</div></div>
+<div class="dropdown"><button class="dropbtn">Institutional Connect ▾</button><div class="menu">
+<a data-page="placement.html" href="placement.html">Industry & Employers</a><a data-page="student.html" href="student.html">Students & Researchers</a><a data-page="partnerships.html" href="partnerships.html">Institutions & Partners</a>
+</div></div>
+<div class="dropdown"><button class="dropbtn">Featured ▾</button><div class="menu">
+<a data-page="conferences.html" href="conferences.html">Research Conferences</a><a data-page="events.html" href="events.html">Events & Master Classes</a><a data-page="research.html" href="research.html">Research & Publications</a>
+</div></div>
+<a data-page="contact.html" class="navcta" href="contact.html">Contact →</a>
+</nav>
+<button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+</div>
+<div class="container mobile">
+<a href="index.html">Home</a><a href="about.html">About</a><a class="sub" href="founder.html">Founder</a><a class="sub" href="leadership.html">Leadership & Governance</a>
+<a href="programs.html">Programs</a><a class="sub" href="program-detail.html?program=faculty">Faculty Development</a><a class="sub" href="program-detail.html?program=research">Research Support</a><a class="sub" href="program-detail.html?program=conferences">Conferences</a>
+<a href="partnerships.html">Institutional Connect</a><a href="events.html">Events & Master Classes</a><a href="contact.html">Contact</a>
+</div></header>
+<div class="ticker"><div class="container">Academic collaboration • Research conferences • Faculty development • Student initiatives • Institutional partnerships</div></div>
+
+<main><section class="pagehero"><div class="container"><span class="eyebrow light" id="kicker">Academic initiative</span><h1 id="title">Faculty Development</h1><p id="intro">Structured academic development designed around the needs of educators and institutions.</p></div></section>
+<section class="section"><div class="container two"><div><span class="eyebrow">What is included</span><div id="points" class="timeline"></div></div><div class="formcard"><span class="badge">Discuss this initiative</span><h2 style="font-size:28px;margin-top:14px">Build the right format for your audience.</h2><p>Use the engagement process to define objectives, participants, scope, delivery format and documentation.</p><a class="btn primary" href="contact.html">Start an enquiry →</a></div></div></section></main>
+<script>
+const data={faculty:{k:"Academic Development",t:"Faculty Development",i:"Structured faculty development experiences that combine academic practice, research capability and professional learning.",p:["Faculty development workshops and training sessions","Teaching, assessment and academic practice themes","Research capability and knowledge-sharing sessions","Custom formats for departments or institutions"]},research:{k:"Research Ecosystem",t:"Research & Publication Support",i:"A structured support layer for research planning, academic events, review workflows and dissemination.",p:["Research theme and track planning","Paper submission and coordination workflows","Reviewer coordination and feedback management","Proceedings and responsible knowledge dissemination"]},conferences:{k:"Academic Events",t:"Conferences & Summits",i:"Planning and coordination support for seminars, conferences, summits and multidisciplinary forums.",p:["Theme, tracks and event architecture","Speaker and academic coordination","Participant registration and communication support","Certificates, reports and post-event documentation"]},students:{k:"Student Development",t:"Student Initiatives",i:"Practical learning experiences that expose students to current professional knowledge and applied skills.",p:["Expert sessions and master classes","Career-oriented knowledge sessions","Project and presentation activities","Industry and professional exposure"]},partnerships:{k:"Collaboration",t:"Institutional Partnerships",i:"Longer-term collaboration models for institutions that want to jointly develop academic, research or professional initiatives.",p:["Joint workshops and academic events","Faculty and researcher exchange activities","Research collaboration opportunities","Mentoring and capacity-building programs"]},advisory:{k:"Advisory",t:"Academic Advisory & Support",i:"A structured sounding board for institutions planning academic initiatives, events, research programs or capability-building projects.",p:["Initiative design and planning","Academic event strategy","Research and knowledge-program planning","Documentation and implementation support"]}};
+const key=new URLSearchParams(location.search).get("program")||"faculty";const x=data[key]||data.faculty;document.getElementById("kicker").textContent=x.k;document.getElementById("title").textContent=x.t;document.getElementById("intro").textContent=x.i;document.getElementById("points").innerHTML=x.p.map((v,i)=>`<div class="step"><b>0${i+1}</b><h3>${v}</h3><p>Define the scope and evidence required for this activity with the institution before launch.</p></div>`).join("");
+</script>
+<footer class="footer"><div class="container footergrid">
+<div><a class="brand" href="index.html"><img src="assets/logo.svg" alt=""><span><strong>VIDYA TILAK</strong><small>College of Management Foundation</small></span></a><p>Vidya Tilak College of Management Foundation is a charitable Section 8 company focused on education, research, academic exchange and institutional collaboration.</p></div>
+<div><h3>Explore</h3><a href="about.html">Our Story</a><a href="programs.html">Programs & Initiatives</a><a href="research.html">Research</a><a href="conferences.html">Conferences</a></div>
+<div><h3>Connect</h3><a href="partnerships.html">Institutions & Partners</a><a href="student.html">Students & Researchers</a><a href="placement.html">Industry & Employers</a><a href="leadership.html">Leadership</a></div>
+<div><h3>Contact</h3><a href="mailto:vidyatilakcollege@gmail.com">vidyatilakcollege@gmail.com</a><a href="tel:+919545553130">+91 95455 53130</a><p>PL No RH C2, FL No 02, MIDC G Block, Chinchwad East S.O, Bhosari, Pune, Maharashtra, India — 411019</p></div>
+</div><div class="container footer-bottom"><span>© 2026 Vidya Tilak College of Management Foundation</span><span>CIN U80900PN2022NPL216442 • NGO Darpan MH/2022/0332187</span></div></footer>
+<div class="sticky-actions"><a href="contact.html">Enquire Now</a><a href="conferences.html">Conferences</a></div>
+<script src="js/main.js"></script></body></html>
