@@ -1,19 +1,18 @@
-# Vidya Tilak College of Management Foundation — Website v5
+# Vidya Tilak College of Management Foundation — Website
 
-This release expands the website from Online / Distance education guidance to a broader education-admission platform covering:
+Static website for regular, online, distance, UG, PG, PhD and research admission guidance.
 
-- Regular college admissions after 10+2 / Intermediate
-- Bachelor’s → Master’s pathways
-- PhD admissions and research guidance
-- Post-doctoral research / fellowship guidance
-- Current programme pages for Mangalayatan University, D. Y. Patil Vidyapeeth and MTSOU based on official sources checked in September 2026
-- University / institution collaboration enquiry page
-- Three SEO-focused knowledge guides under `/blogs/`
-- Improved navigation dropdowns and a redesigned footer
-- Root-level `/styles.css` and `/main.js` for reliable GitHub Pages asset delivery
+## Contact routing
+- Admissions: admission@vidyatilakcollege.org
+- Enquiries: enquiry@vidyatilakcollege.org
+- Other services / institutional collaboration: service@vidyatilakcollege.org
 
-## Logos
-Place institution logo files in `/logos/` using the filenames listed in `logos/README.md`. Text fallbacks are built in.
-
-## Important content rule
-Vidya Tilak is presented as an education guidance / facilitation platform. Degrees and admissions remain the responsibility of the relevant awarding institution. Programme availability, fees, eligibility, mode and recognition should be re-verified from the institution's current official source before enrolment or payment.
+## v6 updates
+- Fixed mobile navigation JavaScript syntax and interaction.
+- Improved mobile spacing and floating Call / Enquire actions so they do not cover content.
+- Added Blogs to the Resources navigation and footer.
+- Added Admission Checklist and Scholarships & Finance guidance pages.
+- Added five detailed SEO-focused blogs.
+- Refreshed page titles, meta descriptions, keywords, canonical URLs and social metadata.
+- Added UGC-DEB verification guidance and DEB-ID references.
+- Logo files used by university cards should remain under `/logos/`.

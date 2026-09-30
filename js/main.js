@@ -1,11 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.getElementById('menu-toggle');
   const panel = document.getElementById('mobile-panel');
+
   if (toggle && panel) {
-    toggle.addEventListener('click', () => {
+    toggle.addEventListener('click', (event) => {
+      event.stopPropagation();
       const open = panel.classList.toggle('open');
       toggle.setAttribute('aria-expanded', String(open));
       toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+      toggle.textContent = open ? '×' : '☰';
+    });
+
+    panel.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        panel.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open navigation');
+        toggle.textContent = '☰';
+      });
     });
   }
 
@@ -25,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
   document.addEventListener('click', () => {
     document.querySelectorAll('.nav-drop.open').forEach(el => {
       el.classList.remove('open');
@@ -33,17 +46,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const path = window.location.pathname.replace(/\\/+$/, '');
+  // Correct slash normalization; the previous expression caused a mobile JS parse error.
+  const path = window.location.pathname.replace(/\/+$/, '');
   const current = path.split('/').pop() || 'index.html';
   document.querySelectorAll('[data-nav]').forEach(a => {
     if (a.getAttribute('data-nav') === current) a.classList.add('active');
   });
   if (path.includes('/blogs/')) {
-    const blog = document.querySelector('a[href="/blog.html"]');
-    if (blog) blog.classList.add('active');
+    document.querySelectorAll('a[href="/blog.html"]').forEach(blog => blog.classList.add('active'));
   }
 
-  document.querySelectorAll('[data-year]').forEach(x => x.textContent = new Date().getFullYear());
+  document.querySelectorAll('[data-year]').forEach(x => {
+    x.textContent = new Date().getFullYear();
+  });
+
+  const formEmails = {
+    'lead-form': 'admission@vidyatilakcollege.org',
+    'contact-form': 'enquiry@vidyatilakcollege.org',
+    'partner-form': 'service@vidyatilakcollege.org'
+  };
 
   function wireForm(id, statusId) {
     const form = document.getElementById(id);
@@ -53,12 +74,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const data = new FormData(form);
       const lines = [];
       for (const [key, value] of data.entries()) lines.push(`${key}: ${value}`);
-      const subject = form.dataset.subject || 'Admission enquiry — Vidya Tilak College of Management Foundation';
+      const subject = form.dataset.subject || 'Education enquiry — Vidya Tilak College of Management Foundation';
+      const recipient = form.dataset.email || formEmails[id] || 'enquiry@vidyatilakcollege.org';
       const status = document.getElementById(statusId);
-      if (status) status.textContent = 'Opening your email client with the enquiry details…';
-      window.location.href = `mailto:vidyatilakcollege@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join('\\n'))}`;
+      if (status) status.textContent = `Opening your email client to ${recipient}…`;
+      window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join('\n'))}`;
     });
   }
+
   wireForm('lead-form', 'lead-status');
   wireForm('contact-form', 'contact-status');
   wireForm('partner-form', 'partner-status');
