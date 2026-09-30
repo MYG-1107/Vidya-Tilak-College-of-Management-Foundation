@@ -1,24 +1,19 @@
-# Vidya Tilak College of Management Foundation — Refined v4
+# Vidya Tilak College of Management Foundation — Website v5
 
-A static, GitHub Pages-ready website rebuilt around the organisation's current positioning as an Online & Distance Education guidance/counselling platform.
+This release expands the website from Online / Distance education guidance to a broader education-admission platform covering:
 
-## Included
-- Online & Distance Education positioning
-- University programme pages for Mangalayatan University, Dr. D. Y. Patil Vidyapeeth and Mata Tripura Sundari Open University
-- UG/PG programme catalogue and comparison page
-- Course Finder + counselling enquiry forms
-- Admission process, eligibility, student support and recognition/compliance guidance
-- Working professionals page
-- FAQ + Knowledge Centre
-- Disclaimer, privacy, terms and refund policy
-- Page-level SEO titles/descriptions, canonicals, Open Graph, Twitter metadata and JSON-LD
-- `logo.jpeg` included at repository root and used as favicon/browser-tab icon and site logo
-- `robots.txt`, `sitemap.xml`, `CNAME`
+- Regular college admissions after 10+2 / Intermediate
+- Bachelor’s → Master’s pathways
+- PhD admissions and research guidance
+- Post-doctoral research / fellowship guidance
+- Current programme pages for Mangalayatan University, D. Y. Patil Vidyapeeth and MTSOU based on official sources checked in September 2026
+- University / institution collaboration enquiry page
+- Three SEO-focused knowledge guides under `/blogs/`
+- Improved navigation dropdowns and a redesigned footer
+- Root-level `/styles.css` and `/main.js` for reliable GitHub Pages asset delivery
 
-## Important content notes
-- The Foundation is not presented as the degree-awarding university.
-- University/programme recognition, entitlement, fees, eligibility and admission dates are treated as programme/mode/session-specific and should be verified on official university sources.
-- The DPU BA fee figure shown on the DPU page is explicitly labelled as a supplied promotional reference from the material provided for this update; it is not presented as a permanent fee promise.
+## Logos
+Place institution logo files in `/logos/` using the filenames listed in `logos/README.md`. Text fallbacks are built in.
 
-## Local preview
-`python -m http.server 8000`
+## Important content rule
+Vidya Tilak is presented as an education guidance / facilitation platform. Degrees and admissions remain the responsibility of the relevant awarding institution. Programme availability, fees, eligibility, mode and recognition should be re-verified from the institution's current official source before enrolment or payment.
