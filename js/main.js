@@ -46,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Correct slash normalization; the previous expression caused a mobile JS parse error.
   const path = window.location.pathname.replace(/\/+$/, '');
   const current = path.split('/').pop() || 'index.html';
   document.querySelectorAll('[data-nav]').forEach(a => {

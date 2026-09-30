@@ -289,3 +289,123 @@
   .footer-links a{font-size:11px}
   .footer-contact-card a{font-size:11px}
 }
+
+
+/* v7 mobile navigation, footer compactness and copyright-line fix — mobile only */
+@media(max-width:700px){
+  .menu-toggle{
+    width:48px;height:48px;flex:0 0 48px;padding:0;display:inline-flex;align-items:center;justify-content:center;
+    border:1px solid #cfe0dc;border-radius:14px;background:#fff;color:var(--teal);
+    box-shadow:0 5px 18px rgba(16,63,82,.08);font-size:0;line-height:1;position:relative
+  }
+  .menu-toggle::before{content:"☰";display:block;font-size:27px;line-height:1;color:var(--teal);transform:translateY(-1px)}
+  .menu-toggle[aria-expanded="true"]::before{content:"×";font-size:34px;transform:none}
+  .mobile-panel.open{
+    grid-template-columns:1fr 1fr;gap:8px;padding:12px;max-height:calc(100dvh - 72px - 78px);
+    overflow-y:auto;overscroll-behavior:contain;background:rgba(252,251,248,.98);
+    border-top:1px solid var(--line);scrollbar-width:thin
+  }
+  .mobile-panel a{
+    min-height:48px;display:flex;align-items:center;justify-content:flex-start;padding:12px;
+    border:1px solid #e0e9e6;border-radius:12px;background:#f4f7f5;color:#263940;
+    font-size:14px;font-weight:600;line-height:1.25;box-shadow:0 2px 8px rgba(16,63,82,.04);
+    white-space:normal;overflow-wrap:anywhere
+  }
+  .mobile-panel a:active{background:#e9f1ee}
+  .mobile-panel a:nth-child(1),.mobile-panel a:nth-last-child(2),.mobile-panel a:last-child{grid-column:1/-1}
+  .mobile-panel .mobile-cta{justify-content:center;background:var(--teal)!important;color:#fff!important;border-color:var(--teal)!important}
+
+  .site-footer{margin-top:45px;padding-bottom:72px}
+  .footer-top{padding:28px 0 22px}
+  .footer-top h2{font-size:28px;line-height:1.1}
+  .footer-top p{font-size:12px;line-height:1.55}
+  .footer-top .btn{width:100%;min-height:44px;margin-top:16px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:16px 14px;padding:24px 0 20px}
+  .footer-brand-panel,.footer-contact-card{grid-column:1/-1}
+  .footer-brand{margin-bottom:8px}
+  .footer-brand img{width:48px;height:48px}
+  .footer-brand strong{font-size:13px}
+  .footer-brand small{font-size:7px}
+  .footer-brand-panel p,.footer-badges{display:none}
+  .footer-links h3,.footer-contact-card h3{font-size:10.5px;letter-spacing:.07em;margin-bottom:6px}
+  .footer-links a{font-size:11.5px;line-height:1.3;padding:3px 0;overflow-wrap:anywhere}
+  .footer-contact-card{padding:14px;border-radius:14px}
+  .footer-contact-card a{font-size:11.5px;line-height:1.35;margin:4px 0;overflow-wrap:anywhere}
+  .footer-contact-card p{font-size:11px;line-height:1.5;margin:10px 0;overflow-wrap:anywhere}
+  .contact-label{font-size:8px;margin-top:6px}
+  .footer-partner-note{display:none}
+
+  /* The old generic mobile rule made every nested span display:block.
+     That included the year span inside the copyright line, which caused:
+     © / 2026 / Vidya Tilak... on separate rows. */
+  .site-footer .footer-bottom .wrap{
+    min-height:0;padding:11px 0;display:flex;flex-direction:column;align-items:flex-start;gap:7px;font-size:9px
+  }
+  .site-footer .footer-bottom .copyright-line{
+    display:flex!important;align-items:center;gap:4px;white-space:nowrap;margin:0!important;font-size:9px
+  }
+  .site-footer .footer-bottom .copyright-line [data-year]{
+    display:inline!important;margin:0!important
+  }
+  .site-footer .footer-bottom .legal-links{
+    display:flex!important;flex-wrap:wrap;align-items:center;gap:10px;margin:0!important
+  }
+  .site-footer .footer-bottom .legal-links a{font-size:9px;margin:0}
+}
+@media(max-width:420px){
+  .menu-toggle{width:46px;height:46px;flex-basis:46px}
+  .mobile-panel.open{padding:10px;gap:7px}
+  .mobile-panel a{min-height:46px;padding:11px;font-size:13px}
+  .footer-top h2{font-size:26px}
+  .footer-grid{gap:14px 12px}
+  .footer-links a{font-size:11px}
+  .footer-contact-card a{font-size:11px}
+  .site-footer .footer-bottom .copyright-line{font-size:8px;gap:3px}
+}
+
+
+/* v7 final mobile-only overrides */
+@media(max-width:700px){
+  .menu-toggle{width:48px;height:48px;flex:0 0 48px;padding:0;display:inline-flex;align-items:center;justify-content:center;border:1px solid #cfe0dc;border-radius:14px;background:#fff;color:var(--teal);box-shadow:0 5px 18px rgba(16,63,82,.08);font-size:0;line-height:1;position:relative}
+  .menu-toggle::before{content:"☰";display:block;font-size:27px;line-height:1;color:var(--teal);transform:translateY(-1px)}
+  .menu-toggle[aria-expanded="true"]::before{content:"×";font-size:34px;transform:none}
+  .mobile-panel.open{grid-template-columns:1fr 1fr;gap:8px;padding:12px;max-height:calc(100dvh - 72px - 78px);overflow-y:auto;overscroll-behavior:contain;background:rgba(252,251,248,.98);border-top:1px solid var(--line);scrollbar-width:thin}
+  .mobile-panel a{min-height:48px;display:flex;align-items:center;justify-content:flex-start;padding:12px;border:1px solid #e0e9e6;border-radius:12px;background:#f4f7f5;color:#263940;font-size:14px;font-weight:600;line-height:1.25;box-shadow:0 2px 8px rgba(16,63,82,.04);white-space:normal;overflow-wrap:anywhere}
+  .mobile-panel a:active{background:#e9f1ee}
+  .mobile-panel a:nth-child(1),.mobile-panel a:nth-last-child(2),.mobile-panel a:last-child{grid-column:1/-1}
+  .mobile-panel .mobile-cta{justify-content:center;background:var(--teal)!important;color:#fff!important;border-color:var(--teal)!important}
+  .site-footer{margin-top:45px;padding-bottom:72px}
+  .footer-top{padding:28px 0 22px}
+  .footer-top h2{font-size:28px;line-height:1.1}
+  .footer-top p{font-size:12px;line-height:1.55}
+  .footer-top .btn{width:100%;min-height:44px;margin-top:16px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:16px 14px;padding:24px 0 20px}
+  .footer-brand-panel,.footer-contact-card{grid-column:1/-1}
+  .footer-brand{margin-bottom:8px}
+  .footer-brand img{width:48px;height:48px}
+  .footer-brand strong{font-size:13px}
+  .footer-brand small{font-size:7px}
+  .footer-brand-panel p,.footer-badges{display:none}
+  .footer-links h3,.footer-contact-card h3{font-size:10.5px;letter-spacing:.07em;margin-bottom:6px}
+  .footer-links a{font-size:11.5px;line-height:1.3;padding:3px 0;overflow-wrap:anywhere}
+  .footer-contact-card{padding:14px;border-radius:14px}
+  .footer-contact-card a{font-size:11.5px;line-height:1.35;margin:4px 0;overflow-wrap:anywhere}
+  .footer-contact-card p{font-size:11px;line-height:1.5;margin:10px 0;overflow-wrap:anywhere}
+  .contact-label{font-size:8px;margin-top:6px}
+  .footer-partner-note{display:none}
+  .site-footer .footer-bottom .wrap{min-height:0;padding:11px 0;display:flex;flex-direction:column;align-items:flex-start;gap:7px;font-size:9px}
+  .site-footer .footer-bottom .copyright-line{display:flex!important;align-items:center;gap:4px;white-space:nowrap;margin:0!important;font-size:9px}
+  .site-footer .footer-bottom .copyright-line [data-year]{display:inline!important;margin:0!important}
+  .site-footer .footer-bottom .legal-links{display:flex!important;flex-wrap:wrap;align-items:center;gap:10px;margin:0!important}
+  .site-footer .footer-bottom .legal-links a{font-size:9px;margin:0}
+}
+@media(max-width:420px){
+  .menu-toggle{width:46px;height:46px;flex-basis:46px}
+  .mobile-panel.open{padding:10px;gap:7px}
+  .mobile-panel a{min-height:46px;padding:11px;font-size:13px}
+  .footer-top h2{font-size:26px}
+  .footer-grid{gap:14px 12px}
+  .footer-links a{font-size:11px}
+  .footer-contact-card a{font-size:11px}
+  .site-footer .footer-bottom .copyright-line{font-size:8px;gap:3px}
+}
