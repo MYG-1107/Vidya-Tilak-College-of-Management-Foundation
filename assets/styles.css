@@ -454,3 +454,23 @@
 .journal-card .btn{margin-top:8px}
 @media(max-width:900px){.career-grid,.journal-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:700px){.career-grid,.journal-grid{grid-template-columns:1fr}.career-card,.journal-card{padding:20px}}
+
+
+/* v7.3 — medical education, partner pathways and publication support */
+.medical-hero{background:linear-gradient(135deg,#0b4a53 0%,#0e6a70 58%,#8b6b32 130%);color:#fff;border-radius:28px;padding:34px;position:relative;overflow:hidden}
+.medical-hero:after{content:"";position:absolute;right:-80px;top:-90px;width:280px;height:280px;border:1px solid rgba(255,255,255,.16);border-radius:50%;box-shadow:0 0 0 48px rgba(255,255,255,.035),0 0 0 98px rgba(255,255,255,.025)}
+.medical-hero .eyebrow,.medical-hero h1,.medical-hero p{position:relative;z-index:1}
+.medical-hero h1{font-size:clamp(34px,5vw,58px);max-width:880px;margin:10px 0 16px;line-height:1.04}
+.medical-hero p{max-width:760px;color:rgba(255,255,255,.86);font-size:16px;line-height:1.7}
+.medical-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.medical-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 8px 28px rgba(16,63,82,.045)}
+.medical-card h3{margin:8px 0;font-size:20px}.medical-card p{font-size:14px;color:var(--muted)}
+.pathway-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+.pathway-step{border:1px solid var(--line);border-radius:16px;padding:18px;background:#fff}.pathway-step strong{display:block;font-size:15px}.pathway-step span{display:block;color:var(--muted);font-size:13px;line-height:1.5;margin-top:6px}
+.source-note{margin-top:18px;padding:16px 18px;border:1px solid #ded6bf;background:#fbf7ea;border-radius:14px;color:#5d4c28;font-size:13px;line-height:1.6}
+.publication-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.publication-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px}.publication-card h3{font-size:18px;margin:7px 0}.publication-card p{font-size:13px;color:var(--muted);line-height:1.55}
+.article-toc{background:#f7faf8;border:1px solid var(--line);border-radius:16px;padding:18px;margin:22px 0}.article-toc a{display:block;padding:7px 0;color:var(--teal);font-weight:600}
+.article-callout{border-left:4px solid var(--teal);background:#f3f8f6;padding:18px 20px;border-radius:0 14px 14px 0;margin:22px 0}.article-callout b{display:block;margin-bottom:5px}
+.partner-ribbon{display:flex;align-items:center;justify-content:space-between;gap:20px;background:#eef6f3;border:1px solid #d9e8e2;padding:18px 20px;border-radius:16px;margin:18px 0}.partner-ribbon strong{display:block}.partner-ribbon span{display:block;color:var(--muted);font-size:13px;margin-top:4px}
+@media(max-width:900px){.medical-grid{grid-template-columns:1fr 1fr}.publication-grid{grid-template-columns:1fr 1fr}.pathway-strip{grid-template-columns:1fr}}
+@media(max-width:700px){.medical-hero{padding:24px;border-radius:22px}.medical-hero h1{font-size:34px}.medical-grid,.publication-grid{grid-template-columns:1fr}.partner-ribbon{align-items:flex-start;flex-direction:column}.pathway-step{padding:16px}}

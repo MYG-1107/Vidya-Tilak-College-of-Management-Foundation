@@ -47,6 +47,15 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const path = window.location.pathname.replace(/\/+$/, '');
+
+  // Keep the long Career Pathways strip on the home page and the most relevant academic/career pages only.
+  const careerPages = new Set([
+    '/', '/index.html', '/programs.html', '/course-finder.html', '/working-professionals.html',
+    '/placement.html', '/career-pathways.html', '/phd-admissions.html', '/student.html'
+  ]);
+  if (!careerPages.has(path)) {
+    document.querySelectorAll('.career-journey').forEach(el => el.remove());
+  }
   const current = path.split('/').pop() || 'index.html';
   document.querySelectorAll('[data-nav]').forEach(a => {
     if (a.getAttribute('data-nav') === current) a.classList.add('active');

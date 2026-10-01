@@ -1,0 +1,9 @@
+UPLOAD NOTE
+
+This v7.3 package does not replace the existing university-logo assets already in the GitHub repository.
+When copying the package into the repository, keep:
+  logos/dypatel.jpg
+  logos/mangalayatan.png
+  logos/mtsou.jpg
+
+The root logo.jpeg is included in this package.
