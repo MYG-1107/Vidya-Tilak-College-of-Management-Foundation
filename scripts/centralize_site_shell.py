@@ -66,13 +66,13 @@ def seo_issues(text: str):
     return [label for label, pattern in checks.items() if not re.search(pattern, text, re.I | re.S)]
 
 def ensure_breadcrumb(text: str) -> str:
-    if re.search(r'"@type"\\s*:\\s*"BreadcrumbList"', text, re.I):
+    if re.search(r'"@type"\s*:\s*"BreadcrumbList"', text, re.I):
         return text
-    canonical_tag = re.search(r"<link\\b(?=[^>]*\\brel\\s*=\\s*['\\\"]canonical['\\\"])[^>]*>", text, re.I)
-    title_match = re.search(r"<title\\b[^>]*>([\\s\\S]*?)</title>", text, re.I)
+    canonical_tag = re.search(r"<link\b(?=[^>]*\brel\s*=\s*['\"]canonical['\"])[^>]*>", text, re.I)
+    title_match = re.search(r"<title\b[^>]*>([\s\S]*?)</title>", text, re.I)
     if not canonical_tag or not title_match:
         return text
-    href_match = re.search(r"\\bhref\\s*=\\s*['\\\"]([^'\\\"]+)", canonical_tag.group(0), re.I)
+    href_match = re.search(r"\bhref\s*=\s*['\"]([^'\"]+)", canonical_tag.group(0), re.I)
     if not href_match:
         return text
     canonical_url = href_match.group(1)
@@ -86,7 +86,7 @@ def ensure_breadcrumb(text: str) -> str:
         ],
     }
     block = '<script type="application/ld+json">' + json.dumps(schema, ensure_ascii=False) + '</script>'
-    text, _ = re.subn(r"</head>", block + "\\n</head>", text, count=1, flags=re.I)
+    text, _ = re.subn(r"</head>", block + "\n</head>", text, count=1, flags=re.I)
     return text
 
 def main():
