@@ -156,7 +156,7 @@ def main():
         for item in seo:
             report.append(f"- {item['page']}: {', '.join(item['missing'])}")
     else:
-        report.append("All audited pages contain a title, description, keywords, robots directive, canonical URL, Open Graph fields, Twitter card fields, H1 and BreadcrumbList/EducationalOrganization schema.")
+        report.append("All audited pages contain a title, description, keywords, robots directive, canonical URL, Open Graph fields, Twitter card fields, an H1 and appropriate structured data: BreadcrumbList plus EducationalOrganization schema or Article schema with an Organization publisher.")
     (ROOT / "SITE-SHELL-SEO-AUDIT.md").write_text("\n".join(report) + "\n", encoding="utf-8")
     print(json.dumps({"converted_html_pages": len(changed), "seo_review_needed": len(seo), "seo_issues": seo[:30]}, indent=2))
     print("Shared shell conversion completed.")
