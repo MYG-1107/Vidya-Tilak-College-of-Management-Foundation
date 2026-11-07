@@ -163,3 +163,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# Breadcrumb generator regex correction — rerun site-wide validation.
