@@ -11,4 +11,4 @@
 
 ## SEO review: 191 pages passed all required metadata/schema checks; 0 need review.
 
-All audited pages contain a title, description, keywords, robots directive, canonical URL, Open Graph fields, Twitter card fields, H1 and BreadcrumbList/EducationalOrganization schema.
+All audited pages contain a title, description, keywords, robots directive, canonical URL, Open Graph fields, Twitter card fields, an H1 and appropriate structured data: BreadcrumbList plus EducationalOrganization schema or Article schema with an Organization publisher.
