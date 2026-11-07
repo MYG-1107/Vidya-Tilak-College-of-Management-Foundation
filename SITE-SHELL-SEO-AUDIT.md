@@ -9,6 +9,6 @@
 - Structured data: BreadcrumbList on every page; EducationalOrganization on standard pages and Article publisher on editorial pages
 - Duplicate homepage charset, viewport and title declarations: removed
 
-## SEO review: 190 pages passed all required metadata/schema checks; 1 need review.
+## SEO review: 191 pages passed all required metadata/schema checks; 0 need review.
 
-- regular-admissions.html: Breadcrumb schema
+All audited pages contain a title, description, keywords, robots directive, canonical URL, Open Graph fields, Twitter card fields, H1 and BreadcrumbList/EducationalOrganization schema.
