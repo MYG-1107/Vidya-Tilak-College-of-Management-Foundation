@@ -1,0 +1,36 @@
+name: Centralise shared site shell
+
+on:
+  push:
+    branches:
+      - feature/centralize-site-shell-gtm-seo
+
+permissions:
+  contents: write
+
+jobs:
+  centralise:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out pull request branch
+        uses: actions/checkout@v4
+        with:
+          ref: feature/centralize-site-shell-gtm-seo
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Replace duplicated page shells and validate SEO
+        run: python scripts/centralize_site_shell.py
+      - name: Commit generated page updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --all
+          if git diff --cached --quiet; then
+            echo "No generated changes were necessary."
+            exit 0
+          fi
+          git commit -m "Centralise shared header footer and GTM across pages"
+          git push origin HEAD:feature/centralize-site-shell-gtm-seo

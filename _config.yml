@@ -1,0 +1,10 @@
+title: Vidya Tilak College of Management Foundation
+description: Higher education guidance, programme discovery, admission support, research services and language learning in Pune, India.
+url: https://vidyatilakcollege.org
+timezone: Asia/Kolkata
+markdown: kramdown
+exclude:
+  - scripts
+  - .github
+  - README.md
+  - SITE-SHELL-SEO-AUDIT.md
