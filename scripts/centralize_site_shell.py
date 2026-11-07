@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Convert the static Vidya Tilak site to one Jekyll-rendered shared header/footer."""
 from pathlib import Path
+import html as html_lib
 import json
 import re
 
@@ -60,9 +61,33 @@ def seo_issues(text: str):
         "Twitter image": r"<meta\b(?=[^>]*\bname\s*=\s*['\"]twitter:image['\"])[^>]*>",
         "H1": r"<h1\b",
         "Breadcrumb schema": r'"@type"\s*:\s*"BreadcrumbList"',
-        "Organisation schema": r'"@type"\s*:\s*"EducationalOrganization"',
+        "Organisation or article publisher schema": r'"@type"\s*:\s*"EducationalOrganization"|"publisher"\s*:\s*\{\s*"@type"\s*:\s*"Organization"',
     }
     return [label for label, pattern in checks.items() if not re.search(pattern, text, re.I | re.S)]
+
+def ensure_breadcrumb(text: str) -> str:
+    if re.search(r'"@type"\\s*:\\s*"BreadcrumbList"', text, re.I):
+        return text
+    canonical_tag = re.search(r"<link\\b(?=[^>]*\\brel\\s*=\\s*['\\\"]canonical['\\\"])[^>]*>", text, re.I)
+    title_match = re.search(r"<title\\b[^>]*>([\\s\\S]*?)</title>", text, re.I)
+    if not canonical_tag or not title_match:
+        return text
+    href_match = re.search(r"\\bhref\\s*=\\s*['\\\"]([^'\\\"]+)", canonical_tag.group(0), re.I)
+    if not href_match:
+        return text
+    canonical_url = href_match.group(1)
+    label = html_lib.unescape(re.sub(r"<[^>]+>", "", title_match.group(1))).strip()
+    schema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://vidyatilakcollege.org/"},
+            {"@type": "ListItem", "position": 2, "name": label, "item": canonical_url},
+        ],
+    }
+    block = '<script type="application/ld+json">' + json.dumps(schema, ensure_ascii=False) + '</script>'
+    text, _ = re.subn(r"</head>", block + "\\n</head>", text, count=1, flags=re.I)
+    return text
 
 def main():
     pages = sorted(p for p in ROOT.rglob("*.html")
@@ -92,6 +117,7 @@ def main():
             if n != 1:
                 errors.append(f"{rel}: closing head tag not found for analytics insertion")
                 continue
+        text = ensure_breadcrumb(text)
         text = clean_duplicate_metadata(text, rel)
         if not text.startswith("---\n"):
             text = "---\nlayout: null\n---\n" + text
@@ -120,6 +146,7 @@ def main():
         "- Analytics source: _includes/google-tag.html (one shared include)",
         "- Analytics container: GTM-MBR6DWLJ",
         "- Page rendering: Jekyll Liquid includes rendered by GitHub Pages",
+        "- Structured data: BreadcrumbList on every page; EducationalOrganization on standard pages and Article publisher on editorial pages",
         "- Duplicate homepage charset, viewport and title declarations: removed",
         "",
         f"## SEO review: {len(changed) - len(seo)} pages passed all required metadata/schema checks; {len(seo)} need review.",
