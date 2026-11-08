@@ -1,0 +1,80 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="theme-color" content="#0b4a53"/>
+<title>{{ page.title | escape }} | Vidya Tilak</title>
+<meta name="description" content="{{ page.description | escape }}"/>
+<meta name="keywords" content="{{ page.keywords | escape }}"/>
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"/>
+<meta name="author" content="Vidya Tilak College of Management Foundation"/>
+<link rel="canonical" href="{{ site.url }}{{ page.url }}"/>
+<link rel="icon" href="/logo.jpeg" type="image/jpeg"/>
+<link rel="apple-touch-icon" href="/logo.jpeg"/>
+<link rel="stylesheet" href="/styles.css"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="Vidya Tilak College of Management Foundation"/>
+<meta property="og:title" content="{{ page.title | escape }} | Vidya Tilak"/>
+<meta property="og:description" content="{{ page.description | escape }}"/>
+<meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
+<meta property="og:image" content="{{ site.url }}/logo.jpeg"/>
+<meta property="article:section" content="{{ page.category | escape }}"/>
+<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}"/>
+<meta property="article:modified_time" content="{{ page.updated | default: page.date | date_to_xmlschema }}"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="{{ page.title | escape }} | Vidya Tilak"/>
+<meta name="twitter:description" content="{{ page.description | escape }}"/>
+<meta name="twitter:image" content="{{ site.url }}/logo.jpeg"/>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "headline":{{ page.title | jsonify }},
+  "description":{{ page.description | jsonify }},
+  "articleSection":{{ page.category | jsonify }},
+  "datePublished":{{ page.date | date_to_xmlschema | jsonify }},
+  "dateModified":{{ page.updated | default: page.date | date_to_xmlschema | jsonify }},
+  "mainEntityOfPage":{"@type":"WebPage","@id":{{ page.url | prepend: site.url | jsonify }}},
+  "author":{"@type":"Organization","name":"Vidya Tilak College of Management Foundation"},
+  "publisher":{"@type":"Organization","name":"Vidya Tilak College of Management Foundation","logo":{"@type":"ImageObject","url":"{{ site.url }}/logo.jpeg"}}
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"{{ site.url }}/"},{"@type":"ListItem","position":2,"name":"Blogs","item":"{{ site.url }}/blog.html"},{"@type":"ListItem","position":3,"name":{{ page.title | jsonify }},"item":{{ page.url | prepend: site.url | jsonify }}}]}
+</script>
+{% include google-tag.html %}
+</head>
+<body>
+<div class="utility"><div class="wrap utility-inner"><span>Higher Education • Technology • Business • Healthcare • Pune</span><span>Knowledge Centre • Study &amp; Career Guides</span></div></div>
+{% include header.html %}
+<main>
+<section class="section hero-compact"><div class="wrap"><div class="category-hero">
+<span class="eyebrow">{{ page.category | escape }} · VIDYA TILAK KNOWLEDGE CENTRE</span>
+<h1>{{ page.title | escape }}</h1>
+<p>{{ page.description | escape }}</p>
+<div class="breadcrumbs"><a href="/blog.html">All guides</a> / {{ page.title | escape }}</div>
+</div></div></section>
+<section class="section"><div class="wrap two-col">
+<article class="content-card article-content">
+<div class="small-muted">Published {{ page.date | date: "%B %-d, %Y" }} · For education and career exploration</div>
+{{ content }}
+<div class="article-callout"><b>Important:</b> This guide is for general education planning. Course availability, admission criteria, recognition, professional scope and fees may change. Confirm current details directly with the institution and relevant regulator before making a decision.</div>
+<div class="internal-links"><a href="/program-catalogue.html">Programme catalogue</a><a href="/digital-skills.html">Digital skills</a><a href="/healthcare-pharma.html">Healthcare &amp; pharma</a><a href="/application.html">Ask a question</a></div>
+</article>
+<aside class="programme-aside">
+<h3>Need help comparing a learning path?</h3>
+<p>Share your current qualification, subject interest and preferred study mode. Vidya Tilak can help you organise the questions to verify with the responsible provider.</p>
+<a class="btn btn-primary" href="/application.html">Make an enquiry</a>
+<a class="btn btn-outline" href="/program-catalogue.html" style="margin-top:10px">Browse programmes</a>
+<div class="notice" style="margin-top:18px"><b>Transparent guidance</b><p>Vidya Tilak is not the degree-awarding university. Admissions and academic decisions remain with the relevant institution.</p></div>
+</aside>
+</div></section>
+</main>
+{% include footer.html %}
+<div class="floating"><a href="tel:+919423573129">Call</a><a href="/application.html">Enquire</a></div>
+<script src="/main.js"></script>
+</body>
+</html>

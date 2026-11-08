@@ -8,3 +8,14 @@ exclude:
   - .github
   - README.md
   - SITE-SHELL-SEO-AUDIT.md
+
+collections:
+  guides:
+    output: true
+    permalink: /blogs/:name/
+defaults:
+  - scope:
+      path: ""
+      type: guides
+    values:
+      layout: guide
