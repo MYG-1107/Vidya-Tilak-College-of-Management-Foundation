@@ -140,3 +140,18 @@
 @media(prefers-reduced-motion:reduce){
   .aw-hero-actions .btn{transition:none}
 }
+
+/* Certificate and higher-education / career guidance benefits */
+.aw-benefit-section{background:#fff}
+.aw-benefit-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.aw-benefit-card{min-width:0;padding:23px 21px;border:1px solid var(--line);border-radius:17px;background:#fff;box-shadow:0 8px 26px rgba(16,63,82,.045)}
+.aw-benefit-card .aw-card-number{display:flex;margin-bottom:16px}
+.aw-benefit-card .card-kicker{display:block;margin-bottom:7px}
+.aw-benefit-card h3{font-size:20px;line-height:1.2;margin:0 0 9px}
+.aw-benefit-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.65}
+.aw-benefit-footer{display:flex;align-items:center;justify-content:space-between;gap:22px;margin-top:22px;padding:18px 20px;border:1px solid #e7dfc9;border-radius:14px;background:#fffaf0}
+.aw-benefit-footer p{max-width:790px;margin:0;color:#59666a;font-size:12px;line-height:1.65}
+.aw-benefit-footer strong{color:var(--navy)}
+.aw-benefit-footer .btn{flex:0 0 auto}
+@media(max-width:1050px){.aw-benefit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.aw-benefit-grid{grid-template-columns:1fr}.aw-benefit-footer{display:block}.aw-benefit-footer .btn{width:100%;margin-top:15px}}
