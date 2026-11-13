@@ -1,157 +1,101 @@
-/* AI workshop landing page — uses the existing Vidya Tilak theme */
+/* Simplified AI workshop page — follows the existing Vidya Tilak site theme */
 .aw-quickbar{position:relative;z-index:2;background:#fff;border-bottom:1px solid var(--line)}
-.aw-quickbar-inner{min-height:58px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-.aw-quickbar-inner>span{font-size:13px;color:#4e6269}
-.aw-quickbar-inner>span strong{color:var(--teal);text-transform:uppercase;letter-spacing:.07em;font-size:10px}
-.aw-quickbar .btn{min-height:40px;padding:9px 17px}
-.aw-hero{padding:72px 0 68px;background:linear-gradient(125deg,#f6faf8 0%,#edf5f2 60%,#fff8e9 100%);border-bottom:1px solid var(--line);overflow:hidden}
-.aw-hero-layout{display:grid;grid-template-columns:1.14fr .86fr;gap:54px;align-items:center}
-.aw-hero-copy .eyebrow{margin-bottom:15px}
-.aw-audience-tag{display:inline-flex;align-items:center;margin:0 0 17px;padding:7px 12px;border:1px solid #b9d3cc;border-radius:999px;background:#fff;color:var(--teal);font-size:11px;line-height:1.35;font-weight:800;letter-spacing:.04em}
-.aw-hero h1{max-width:760px;font-size:clamp(43px,5.2vw,66px);line-height:1.07;margin-bottom:19px}
-.aw-hero-lead{max-width:690px;color:#52646b;font-size:18px;line-height:1.68}
-.aw-hero-actions{display:flex;gap:11px;flex-wrap:wrap;margin:25px 0 13px}
-.aw-hero-actions .btn{min-height:47px;padding:13px 20px}
-.aw-hero-note{font-size:12px;color:#6d7e83;margin:0}
-.aw-hero-panel{position:relative;overflow:hidden;padding:34px 34px 25px;border-radius:22px;background:linear-gradient(145deg,#0a3944,#0b4a53 62%,#17646a);color:#fff;box-shadow:0 22px 55px rgba(16,63,82,.18)}
-.aw-hero-panel:after{content:"";position:absolute;width:250px;height:250px;right:-115px;top:-100px;border:1px solid rgba(255,255,255,.15);border-radius:50%;box-shadow:0 0 0 28px rgba(255,255,255,.025),0 0 0 58px rgba(255,255,255,.02)}
-.aw-panel-kicker{position:relative;z-index:1;color:#f2cb70;font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}
-.aw-panel-title{position:relative;z-index:1;margin:20px 0 23px;color:#fff;font:700 clamp(30px,3vw,43px)/1.12 Georgia,"Times New Roman",serif;letter-spacing:-.025em}
-.aw-panel-rule{position:relative;z-index:1;height:1px;background:rgba(255,255,255,.18)}
-.aw-panel-points{position:relative;z-index:1;display:grid;gap:15px;padding:22px 0}
-.aw-panel-points>div{display:grid;grid-template-columns:36px 1fr;column-gap:10px;align-items:center}
-.aw-panel-points>div>span{grid-row:span 2;color:#f2cb70;font-size:11px;font-weight:800}
-.aw-panel-points b{color:#fff;font-size:14px}
-.aw-panel-points small{color:#c5dbd7;font-size:11px}
-.aw-panel-footer{position:relative;z-index:1;padding-top:15px;border-top:1px solid rgba(255,255,255,.15);color:#d0e2df;font-size:11px}
-.aw-event-strip{background:#0b4a53;color:#fff}
-.aw-event-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
-.aw-event-grid>div{min-height:95px;display:flex;flex-direction:column;justify-content:center;gap:4px;padding:17px 22px;border-right:1px solid rgba(255,255,255,.14)}
-.aw-event-grid>div:first-child{padding-left:0}
-.aw-event-grid>div:last-child{border-right:0}
-.aw-event-grid span{color:#a9c9c3;font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
-.aw-event-grid strong{color:#fff;font-size:14px;line-height:1.35}
-.aw-learning-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
-.aw-learning-card{position:relative;min-height:245px;padding:27px 25px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 8px 28px rgba(16,63,82,.045)}
-.aw-card-number{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;margin-bottom:20px;border-radius:10px;background:#edf4f1;color:var(--teal);font:700 13px Georgia,"Times New Roman",serif}
-.aw-learning-card .card-kicker{display:block;margin-bottom:7px}
-.aw-learning-card h3{font-size:22px;margin:0 0 10px}
-.aw-learning-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.65}
-.aw-why-section{padding:76px 0;background:#103f52;color:#e5f0ed}
-.aw-why-intro{max-width:880px;margin-bottom:32px}
-.aw-why-intro .eyebrow{color:#f2cb70}
-.aw-why-intro h2{max-width:800px;color:#fff}
-.aw-why-intro p{max-width:870px;color:#d1e1de;font-size:15px;line-height:1.75}
-.aw-discipline-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-.aw-discipline-grid article{padding:21px 18px;border:1px solid rgba(255,255,255,.16);border-radius:15px;background:rgba(255,255,255,.045)}
-.aw-discipline-grid article>span{display:block;margin-bottom:12px;color:#f2cb70;font-size:11px;font-weight:800;letter-spacing:.08em}
-.aw-discipline-grid h3{min-height:50px;color:#fff;font:700 18px/1.2 Arial,Helvetica,sans-serif}
-.aw-discipline-grid p{margin:0;color:#c8dbd7;font-size:12px;line-height:1.65}
-.aw-responsible-note{margin:24px 0 0;padding:16px 18px;border-left:3px solid #e0a52b;background:rgba(255,255,255,.06);color:#d7e7e3;font-size:12px;line-height:1.65}
-.aw-responsible-note strong{color:#fff}
-.aw-attend-section{background:#fff}
-.aw-attend-layout{display:grid;grid-template-columns:.95fr 1.05fr;gap:45px;align-items:center}
-.aw-attend-layout h2{font-size:clamp(32px,3.6vw,45px)}
-.aw-attend-lead{max-width:530px;color:var(--muted);font-size:16px}
-.aw-eligibility-card{padding:27px 30px;border:1px solid var(--line);border-radius:18px;background:#f7faf8}
-.aw-eligibility-card ul{margin:0 0 13px;padding-left:21px}
-.aw-eligibility-card li{margin:10px 0;color:#364950;font-size:14px}
-.aw-eligibility-card p{margin:0;padding-top:13px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
-.aw-about-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:center}
-.aw-about-layout>div>p{color:#596a70;font-size:15px}
-.aw-about-layout .text-link{margin-top:5px}
-.aw-about-card{padding:29px;border:1px solid #d9e5e0;border-radius:19px;background:#fff;box-shadow:0 10px 30px rgba(16,63,82,.06)}
-.aw-about-card .aw-card-number{width:auto;height:auto;margin:0 0 13px;padding:7px 10px;border-radius:999px;font:800 10px Arial,Helvetica,sans-serif;letter-spacing:.08em}
-.aw-about-card h3{font-size:26px}
-.aw-about-card p{color:var(--muted);font-size:14px}
-.aw-about-links{display:grid;gap:0;margin-top:16px;border-top:1px solid var(--line)}
-.aw-about-links a{padding:10px 0;border-bottom:1px solid var(--line);color:var(--teal);font-size:13px;font-weight:800}
-.aw-registration-section{background:#f8faf8;border-top:1px solid var(--line)}
-.aw-registration-heading{max-width:780px;margin:0 auto 32px;text-align:center}
-.aw-registration-heading h2{margin-bottom:11px}
-.aw-registration-heading p{color:var(--muted);font-size:15px}
-.aw-registration-layout{display:grid;grid-template-columns:.72fr 1.28fr;gap:19px;align-items:start}
-.aw-registration-aside{padding:27px 25px;border-radius:18px;background:#103f52;color:#fff}
-.aw-registration-aside h3{margin:15px 0 19px;color:#fff;font-size:25px}
-.aw-registration-aside dl{margin:0}
-.aw-registration-aside dl>div{display:grid;grid-template-columns:90px 1fr;gap:10px;padding:10px 0;border-top:1px solid rgba(255,255,255,.15)}
-.aw-registration-aside dt{color:#a9c9c3;font-size:11px;font-weight:800}
-.aw-registration-aside dd{margin:0;color:#fff;font-size:12px;font-weight:700}
-.aw-registration-aside>p{margin:17px 0 0;color:#c8dbd7;font-size:12px;line-height:1.65}
-.aw-form-card{min-width:0;padding:20px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 8px 28px rgba(16,63,82,.05)}
-.aw-form-heading{padding:3px 4px 14px}
-.aw-form-heading h3{margin-bottom:4px;font-size:23px}
+.aw-quickbar-inner{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.aw-quickbar-inner>span{font-size:12px;color:#4e6269}
+.aw-quickbar-inner>span strong{color:var(--teal);font-size:10px;letter-spacing:.07em;text-transform:uppercase}
+.aw-quickbar .btn{min-height:38px;padding:8px 16px;font-size:12px}
+.aw-hero{padding:58px 0;background:linear-gradient(125deg,#f6faf8 0%,#edf5f2 65%,#fff8e9 100%);border-bottom:1px solid var(--line)}
+.aw-hero-layout{display:grid;grid-template-columns:1.2fr .8fr;gap:38px;align-items:center}
+.aw-hero-copy .eyebrow{margin-bottom:10px}
+.aw-audience-tag{display:inline-flex;margin:0 0 15px;padding:6px 11px;border:1px solid #b9d3cc;border-radius:999px;background:#fff;color:var(--teal);font-size:10px;line-height:1.4;font-weight:800}
+.aw-hero h1{max-width:720px;margin-bottom:14px;font-size:clamp(40px,5vw,62px);line-height:1.08}
+.aw-hero-lead{max-width:640px;color:#52646b;font-size:17px;line-height:1.6}
+.aw-hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0 23px}
+.aw-hero-actions .btn{min-height:44px;padding:11px 17px}
+.aw-facts{display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;max-width:610px;padding-top:17px;border-top:1px solid #cbded8}
+.aw-facts div{display:flex;flex-direction:column;gap:1px}
+.aw-facts span{color:#708087;font-size:9px;font-weight:800;letter-spacing:.11em;text-transform:uppercase}
+.aw-facts strong{color:var(--navy);font-size:12px}
+.aw-hero-aside{padding:27px 28px;border-radius:18px;background:#103f52;color:#fff}
+.aw-panel-kicker{color:#f2cb70;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.aw-hero-aside h2{margin:13px 0 10px;color:#fff;font-size:clamp(24px,2.6vw,33px);line-height:1.18}
+.aw-hero-aside p{margin:0;color:#d4e3e0;font-size:13px;line-height:1.65}
+.aw-hero-aside .aw-hero-eligibility{margin-top:17px;padding-top:14px;border-top:1px solid rgba(255,255,255,.16);font-size:12px}
+.aw-hero-eligibility strong{color:#fff}
+.aw-learn-section{padding-top:59px;padding-bottom:59px}
+.aw-learning-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.aw-learning-card{padding:22px 21px;background:#fff;border:1px solid var(--line);border-radius:15px;box-shadow:0 6px 22px rgba(16,63,82,.04)}
+.aw-card-number{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;margin-bottom:14px;border-radius:9px;background:#edf4f1;color:var(--teal);font:700 12px Georgia,"Times New Roman",serif}
+.aw-learning-card h3,.aw-benefit-card h3{margin:0 0 7px;font-size:19px;line-height:1.2}
+.aw-learning-card p,.aw-benefit-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.62}
+.aw-why-12{margin:22px 0 0;padding:14px 17px;border-left:3px solid var(--gold);background:#fffaf0;color:#59666a;font-size:13px;line-height:1.65}
+.aw-why-12 strong{color:var(--navy)}
+.aw-speaker-section{padding-top:12px;padding-bottom:60px;background:#fff}
+.aw-speaker-card{display:grid;grid-template-columns:240px 1fr;gap:29px;align-items:center;max-width:850px;margin:0 auto;padding:22px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 8px 26px rgba(16,63,82,.05)}
+.aw-speaker-image{overflow:hidden;width:100%;aspect-ratio:1/1;border-radius:14px;background:#edf4f1}
+.aw-speaker-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.aw-speaker-copy h2{margin:4px 0 7px;font-size:clamp(27px,3vw,36px)}
+.aw-speaker-role{margin:0;color:var(--teal);font-size:15px;font-weight:800}
+.aw-speaker-location{margin:2px 0 12px;color:var(--muted);font-size:12px}
+.aw-speaker-copy>p:last-child{margin:0;color:#596a70;font-size:14px;line-height:1.65}
+.aw-benefits-section{padding-top:58px;padding-bottom:58px;background:#f4f7f5}
+.aw-benefits-section .section-title{margin-bottom:22px}
+.aw-benefit-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.aw-benefit-card{padding:22px 23px;border:1px solid var(--line);border-radius:15px;background:#fff}
+.aw-benefit-card .aw-card-number{margin-bottom:13px}
+.aw-college-note{margin:17px 0 0;color:var(--muted);font-size:12px;line-height:1.6}
+.aw-registration-section{padding-top:58px;padding-bottom:65px;background:#fff;border-top:1px solid var(--line)}
+.aw-registration-wrap{max-width:900px}
+.aw-registration-heading{max-width:700px;margin:0 auto 25px;text-align:center}
+.aw-registration-heading h2{margin-bottom:8px}
+.aw-registration-heading p{margin-bottom:8px;color:var(--muted);font-size:14px}
+.aw-registration-heading .aw-register-eligibility{color:var(--teal);font-size:12px}
+.aw-form-card{padding:18px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 8px 25px rgba(16,63,82,.05)}
+.aw-form-heading{padding:2px 3px 12px}
+.aw-form-heading h3{margin-bottom:3px;font-size:21px}
 .aw-form-heading p{margin:0;color:var(--muted);font-size:12px}
-.aw-form-frame{width:100%;overflow:hidden;border:1px solid #e4ebe8;border-radius:12px;background:#fff}
+.aw-form-frame{width:100%;overflow:hidden;border:1px solid #e4ebe8;border-radius:11px;background:#fff}
 .aw-form-frame iframe{display:block;width:100%;height:1250px;border:0;background:#fff}
-.aw-form-fallback{margin:12px 3px 0;color:var(--muted);font-size:12px}
+.aw-form-fallback{margin:11px 2px 0;color:var(--muted);font-size:12px}
 .aw-form-fallback a{color:var(--teal);font-weight:800;text-decoration:underline;text-underline-offset:3px}
-.aw-form-note{max-width:900px;margin:17px auto 0;color:var(--muted);font-size:11px;text-align:center}
-.aw-quickbar a:focus-visible,.aw-hero a:focus-visible,.aw-about-links a:focus-visible,.aw-form-fallback a:focus-visible{outline:3px solid #e0a52b;outline-offset:3px}
-@media(max-width:1050px){
-  .aw-hero-layout{grid-template-columns:1fr 360px;gap:28px}
-  .aw-event-grid>div{padding-left:15px;padding-right:15px}
-  .aw-event-grid strong{font-size:12px}
-  .aw-discipline-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .aw-registration-layout{grid-template-columns:1fr}
-  .aw-registration-aside dl{display:grid;grid-template-columns:1fr 1fr;column-gap:20px}
+.aw-quickbar a:focus-visible,.aw-hero a:focus-visible,.aw-form-fallback a:focus-visible{outline:3px solid #e0a52b;outline-offset:3px}
+@media(max-width:950px){
+  .aw-hero-layout{grid-template-columns:1fr .8fr;gap:22px}
+  .aw-speaker-card{grid-template-columns:200px 1fr}
 }
 @media(max-width:760px){
-  .aw-quickbar-inner{padding:10px 0;align-items:flex-start}
-  .aw-quickbar-inner>span{max-width:62%;font-size:11px;line-height:1.45}
-  .aw-quickbar .btn{padding:9px 12px;font-size:12px;white-space:nowrap}
-  .aw-hero{padding:49px 0 45px}
-  .aw-hero-layout{grid-template-columns:1fr;gap:30px}
-  .aw-hero h1{font-size:clamp(39px,10vw,52px)}
-  .aw-hero-lead{font-size:16px}
-  .aw-hero-panel{padding:26px 24px 21px}
-  .aw-panel-title{font-size:34px}
-  .aw-event-grid{grid-template-columns:1fr 1fr}
-  .aw-event-grid>div{min-height:82px;padding:13px 12px;border-bottom:1px solid rgba(255,255,255,.14)}
-  .aw-event-grid>div:first-child{padding-left:12px}
-  .aw-event-grid>div:nth-child(2){border-right:0}
-  .aw-event-grid>div:nth-child(3){border-bottom:0}
-  .aw-event-grid>div:last-child{border-bottom:0}
-  .aw-event-grid strong{font-size:12px}
+  .aw-quickbar-inner{padding:9px 0}
+  .aw-quickbar-inner>span{font-size:10px}
+  .aw-quickbar .btn{padding:8px 11px}
+  .aw-hero{padding:43px 0}
+  .aw-hero-layout{grid-template-columns:1fr;gap:22px}
+  .aw-hero h1{font-size:clamp(37px,9vw,49px)}
+  .aw-hero-lead{font-size:15px}
+  .aw-hero-aside{padding:22px}
   .aw-learning-grid{grid-template-columns:1fr}
-  .aw-learning-card{min-height:0;padding:23px}
-  .aw-why-section{padding:56px 0}
-  .aw-why-intro h2{font-size:34px}
-  .aw-discipline-grid{grid-template-columns:1fr 1fr}
-  .aw-discipline-grid article{padding:17px 14px}
-  .aw-discipline-grid h3{min-height:0;font-size:16px}
-  .aw-attend-layout,.aw-about-layout{grid-template-columns:1fr;gap:22px}
-  .aw-eligibility-card{padding:22px}
+  .aw-learning-card{padding:20px}
+  .aw-speaker-section{padding-top:0;padding-bottom:45px}
+  .aw-speaker-card{grid-template-columns:130px 1fr;gap:17px;padding:15px}
+  .aw-speaker-copy h2{font-size:25px}
+  .aw-speaker-role{font-size:13px}
+  .aw-speaker-copy>p:last-child{font-size:12px}
+  .aw-benefit-grid{grid-template-columns:1fr}
   .aw-registration-heading{text-align:left}
-  .aw-registration-aside dl{grid-template-columns:1fr}
-  .aw-form-card{padding:12px}
+  .aw-form-card{padding:11px}
   .aw-form-frame iframe{height:1450px}
 }
 @media(max-width:430px){
   .aw-quickbar-inner{gap:8px}
-  .aw-quickbar-inner>span{max-width:58%;font-size:10px}
-  .aw-quickbar .btn{font-size:11px;padding:8px 10px}
-  .aw-audience-tag{font-size:10px}
-  .aw-hero h1{font-size:38px}
-  .aw-hero-actions .btn{width:100%}
-  .aw-discipline-grid{grid-template-columns:1fr}
+  .aw-quickbar-inner>span{max-width:57%;font-size:9px}
+  .aw-quickbar .btn{font-size:10px;padding:7px 9px}
+  .aw-audience-tag{font-size:9px}
+  .aw-hero h1{font-size:36px}
+  .aw-hero-actions .btn{flex:1}
+  .aw-facts{gap:9px 13px}
+  .aw-facts strong{font-size:11px}
+  .aw-speaker-card{grid-template-columns:1fr;max-width:420px}
+  .aw-speaker-image{max-width:230px;margin:auto}
+  .aw-speaker-copy{text-align:center}
   .aw-form-frame iframe{height:1550px}
 }
-@media(prefers-reduced-motion:reduce){
-  .aw-hero-actions .btn{transition:none}
-}
-
-/* Certificate and higher-education / career guidance benefits */
-.aw-benefit-section{background:#fff}
-.aw-benefit-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
-.aw-benefit-card{min-width:0;padding:23px 21px;border:1px solid var(--line);border-radius:17px;background:#fff;box-shadow:0 8px 26px rgba(16,63,82,.045)}
-.aw-benefit-card .aw-card-number{display:flex;margin-bottom:16px}
-.aw-benefit-card .card-kicker{display:block;margin-bottom:7px}
-.aw-benefit-card h3{font-size:20px;line-height:1.2;margin:0 0 9px}
-.aw-benefit-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.65}
-.aw-benefit-footer{display:flex;align-items:center;justify-content:space-between;gap:22px;margin-top:22px;padding:18px 20px;border:1px solid #e7dfc9;border-radius:14px;background:#fffaf0}
-.aw-benefit-footer p{max-width:790px;margin:0;color:#59666a;font-size:12px;line-height:1.65}
-.aw-benefit-footer strong{color:var(--navy)}
-.aw-benefit-footer .btn{flex:0 0 auto}
-@media(max-width:1050px){.aw-benefit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:760px){.aw-benefit-grid{grid-template-columns:1fr}.aw-benefit-footer{display:block}.aw-benefit-footer .btn{width:100%;margin-top:15px}}
+@media(prefers-reduced-motion:reduce){.aw-hero-actions .btn{transition:none}}
